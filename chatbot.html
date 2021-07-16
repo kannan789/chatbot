@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: sans-serif;
+        }
+        .botbox{
+            width:400px;
+            height:620px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 450px;
+            background-color: white;
+            border-radius: 15px;
+            position:relative;
+            
+        }
+        .intro{
+            height:270px;
+            background-color:#ff7518;
+            border-radius: 10px 10px 0 0;
+            color:white;
+            font-size: 18px;
+        }
+        #intro_text{
+              padding-top: 10px;
+              margin-left: 50px;
+        }
+        .text_area{
+            width:380px;
+            height: 380px;
+            margin-left: 10px;
+            position:absolute;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 35px;
+            border:0.5px solid lightgray;
+            color:black;
+        }
+        .faq{
+            margin-top: 50px;
+            margin-left: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        button{
+            margin-top: 10px;
+            background-color: white;
+            width:330px;
+            border-radius: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border:0.5px solid lightgray;
+            font-size: 12px;
+            text-align: left;
+        }
+        #strt_chat{
+            margin-top: 20px;
+            border-radius: 25px;
+            text-align: center;
+            width:260px;
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .circle{
+            position:absolute;
+            z-index: 5;
+            width:70px;
+            height: 70px;
+            background-color: #ff7518;
+            border-radius: 35px;
+            margin-left: 20px;
+            border:0.5px solid lightgray;
+        }
+        svg{
+            width:25px;
+            height:25px;
+        }
+        #Capa_1{
+             width:15px;
+             height:15px;
+        }
+        .feather-circle{
+            width:10px;
+            height:10px;
+            background-color:#ff7518 ;
+        }
+        #Layer_2{
+            transform: translate(16px,16px);
+            height:40px;
+            width:40px;
+        
+        }
+        #msg_icon{
+            height:15px;
+            width:15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="botbox">
+        <div class="intro">
+            <div id="intro_text">
+        <h2> IRIS</h2>
+        <h3>Hello
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 129 200" enable-background="new 0 0 129 200" xml:space="preserve">
+<g>
+	<path fill="#BB8C82" d="M120.9,137.4c0-7.5,0-22.7,0-37.8h-10.8c0,1.8-1.4,3.2-3.2,3.2c0,0-6,0-6,0c-0.1,0-0.2,0-0.3,0
+		c-0.1,0-0.2,0-0.4,0l-53.8-0.2c-1.7,0-3.1-1.3-3.2-3H31.9v24.3c9.4,0.8,18.1,4.8,24.7,11.6C64,143,68,153,68,163.6
+		c0,1.8-1.4,3.2-3.2,3.2l0,26.8c30.8,0,55.8-24.8,56.2-55.5C120.9,137.9,120.9,137.7,120.9,137.4z"/>
+	<path fill="#A97C71" d="M80,96.3l17.3,0.1V32.2c0-2.4-0.9-4.6-2.5-6.2c-1.6-1.7-3.8-2.6-6.1-2.6c-4.8,0-8.7,3.9-8.7,8.7V96.3z"/>
+	<path fill="#A97C71" d="M43.2,99.4c0-1.8,1.4-3.2,3.2-3.2c0,0,3.2,0,3.2,0v-9.6c0-1.8,1.4-3.2,3.2-3.2c1.8,0,3.2,1.4,3.2,3.2v9.6
+		l17.6,0.1V15.2c0-2.4-0.9-4.6-2.5-6.2c-1.6-1.7-3.8-2.6-6.2-2.6c-4.9,0-8.9,3.9-8.9,8.7v58.8c0,1.8-1.4,3.2-3.2,3.2
+		c-1.8,0-3.2-1.4-3.2-3.2v-42c0-4.8-3.9-8.7-8.7-8.7c-4.9,0-9,4-9,8.7v67.7h11.3C43.2,99.5,43.2,99.5,43.2,99.4z"/>
+	<path fill="#A97C71" d="M120.9,58.1c0-4.9-3.7-8.8-8.4-8.8c-4.9,0-8.8,3.9-8.8,8.7v38.4l3.2,0c1.8,0,3.2,1.4,3.2,3.2h10.8
+		C120.9,79,120.9,58.5,120.9,58.1z"/>
+	<path fill="#A97C71" d="M64.8,166.8c-1.8,0-3.2-1.4-3.2-3.2c0-8.9-3.3-17.3-9.5-23.6c-6.2-6.3-14.5-9.8-23.4-9.8
+		c-1.8,0-3.2-1.4-3.2-3.2V77.7c0-4.8-3.9-8.7-8.7-8.7C12,69,8.1,72.9,8,77.7c0,0.4,0.1,41,0,59c0,0.2,0,0.3,0,0.5
+		c0,31.1,25.4,56.4,56.7,56.4C64.8,193.6,64.8,166.8,64.8,166.8z"/>
+	<path fill="#422938" d="M127.3,136.8c0.1-18.5,0-78.1,0-78.6c0-8.5-6.4-15.2-14.7-15.2l-0.1,0c-3.3,0-6.3,1-8.8,2.8V32.2
+		c0-4-1.5-7.8-4.3-10.7c-2.8-2.9-6.6-4.5-10.6-4.5h-0.1c-3.2,0-6.2,1-8.7,2.8v-4.5c0-4-1.5-7.9-4.4-10.7C72.8,1.6,69,0,64.9,0h-0.1
+		c-8.4,0-15.2,6.8-15.3,15.1v4.5c-2.4-1.7-5.4-2.8-8.6-2.8h-0.1c-8.4,0-15.3,6.8-15.4,15.1v33.5c-2.5-1.8-5.5-2.8-8.7-2.8h-0.1
+		c-8.3,0-15.1,6.8-15.1,15.1c0,0.4,0.1,41.8,0,59.5c0,0.2,0,0.4,0,0.5C2,172.1,30.2,200,64.8,200c16.8,0,32.5-6.5,44.3-18.3
+		c11.8-11.8,18.3-27.5,18.3-44.3C127.3,137.2,127.3,137,127.3,136.8z M64.8,193.6c-31.3,0-56.7-25.3-56.7-56.4c0-0.2,0-0.3,0-0.5
+		c0.1-18,0-58.6,0-59c0-4.8,3.9-8.7,8.8-8.7c4.8,0,8.7,3.9,8.7,8.7V127c0,1.8,1.4,3.2,3.2,3.2c8.9,0,17.2,3.5,23.4,9.8
+		c6.2,6.3,9.6,14.7,9.5,23.6c0,1.8,1.4,3.2,3.2,3.2c1.8,0,3.2-1.4,3.2-3.2c0-10.6-4-20.6-11.3-28.1c-6.6-6.8-15.3-10.8-24.7-11.6
+		v-92c0-4.7,4.1-8.7,9-8.7c4.8,0,8.6,3.9,8.7,8.7v42c0,1.8,1.4,3.2,3.2,3.2c1.8,0,3.2-1.4,3.2-3.2V15.1c0-4.8,4-8.7,8.9-8.7
+		c2.3,0,4.5,0.9,6.2,2.6c1.6,1.7,2.5,3.9,2.5,6.2v81.1L56,96.3v-9.6c0-1.8-1.4-3.2-3.2-3.2c-1.8,0-3.2,1.4-3.2,3.2v9.6l-3.2,0
+		c-1.8,0-3.2,1.4-3.2,3.2c0,0.1,0,0.1,0,0.2c0.1,1.7,1.5,3,3.2,3l53.8,0.2c0.1,0,0.2,0,0.4,0c0.1,0,0.2,0,0.3,0l6,0
+		c1.8,0,3.2-1.4,3.2-3.2c0-1.8-1.4-3.2-3.2-3.2l-3.2,0V58c0-4.8,4-8.7,8.8-8.7c4.7,0,8.4,3.9,8.4,8.8c0,0.4,0,20.8,0,41.5
+		c0,15.1,0,30.4,0,37.8c0,0.2,0,0.5,0.1,0.7C120.6,168.8,95.5,193.6,64.8,193.6z M88.7,23.3c2.3,0,4.5,0.9,6.1,2.6
+		c1.6,1.7,2.5,3.9,2.5,6.2v64.2L80,96.3V32.1C80,27.3,83.9,23.3,88.7,23.3z"/>
+</g>
+</svg>
+        </h3>
+        <div>I am Iris,a Virtual Assistant<br>
+        How may I help you?</div>
+        </div>
+
+        <div class="text_area">
+            <div class="faq">
+                
+             <div>Frequently Asked Questions
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 438.5 438.5" style="enable-background:new 0 0 438.5 438.5;" xml:space="preserve">
+           <style type="text/css">
+               .st0{fill:url(#SVGID_1_);}
+           </style>
+           <g>
+               <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="219.267" x2="438.532" y2="219.267">
+                   <stop  offset="0" style="stop-color:#ff7518"/>
+                   <stop  offset="1" style="stop-color:#ff7518"/>
+               </linearGradient>
+               <path class="st0" d="M409.1,109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7,9.8,259.1,0,219.3,0c-39.8,0-76.5,9.8-110.1,29.4
+                   C75.6,49,49,75.6,29.4,109.2C9.8,142.8,0,179.5,0,219.3c0,39.8,9.8,76.5,29.4,110.1c19.6,33.6,46.2,60.2,79.8,79.8
+                   c33.6,19.6,70.3,29.4,110.1,29.4s76.5-9.8,110.1-29.4c33.6-19.6,60.2-46.2,79.8-79.8c19.6-33.6,29.4-70.3,29.4-110.1
+                   C438.5,179.5,428.7,142.8,409.1,109.2z M255.8,356.3c0,2.7-0.9,4.9-2.6,6.6c-1.7,1.7-3.9,2.6-6.6,2.6h-54.8c-2.7,0-4.9-0.9-6.6-2.6
+                   c-1.7-1.7-2.6-3.9-2.6-6.6v-54.8c0-2.7,0.9-4.9,2.6-6.6c1.7-1.7,3.9-2.6,6.6-2.6h54.8c2.7,0,4.9,0.9,6.6,2.6
+                   c1.7,1.7,2.6,3.9,2.6,6.6V356.3z M325.3,187.6c-2.4,7-5,12.8-8,17.3c-2.9,4.5-7.2,9-12.7,13.7c-5.5,4.7-9.9,8-13.1,10
+                   c-3.2,2-7.9,4.7-14,8.1c-6.3,3.6-11.5,8.3-15.6,14.1c-4.1,5.8-6.1,10.5-6.1,14.1c0,2.7-0.9,4.9-2.6,6.6c-1.7,1.7-3.9,2.6-6.6,2.6
+                   h-54.8c-2.7,0-4.9-0.9-6.6-2.6c-1.7-1.7-2.6-3.9-2.6-6.6v-10.3c0-12.8,5-24.7,15-35.8c10-11.1,21-19.4,33-24.7
+                   c9.1-4.2,15.6-8.5,19.4-12.8c3.8-4.4,5.7-10.2,5.7-17.4c0-6.3-3.6-11.9-10.7-16.8c-7.1-4.9-15.3-7.4-24.4-7.4
+                   c-9.9,0-18.1,2.3-24.6,6.9c-6.3,4.6-14.5,13.3-24.6,26.3c-1.7,2.3-4.1,3.4-7.1,3.4c-2.3,0-4.1-0.6-5.4-1.7l-37.7-28.6
+                   c-4.4-3.4-5.1-7.4-2.3-12c24.4-40.5,59.7-60.8,105.9-60.8c16.6,0,32.7,3.9,48.5,11.7c15.8,7.8,29,18.8,39.5,33.1
+                   c10.6,14.3,15.8,29.8,15.8,46.5C328.9,172.8,327.7,180.5,325.3,187.6z"/>
+           </g>
+           </svg>
+           </div>
+             <button>
+                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>
+                 
+                &nbsp;
+                Can I redeem my FB before the original term?
+            </button>
+             <button>
+                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>
+                &nbsp;
+                How do I pay my Credit card bill?
+            </button>
+             <button>
+                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>
+                &nbsp;
+                How can I get my Account Statemant?
+            </button>
+             <button>
+                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>
+
+                &nbsp;
+                What is the tenure of Fixed Deposit?
+            </button>
+             <button id="strt_chat">
+                <svg id="msg_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 3C3.44772 3 3 3.44772 3 4V16.5858L5.29289 14.2929C5.48043 14.1054 5.73478 14 6 14H16C16.5523 14 17 13.5523 17 13V4C17 3.44772 16.5523 3 16 3H4ZM1 4C1 2.34315 2.34315 1 4 1H16C17.6569 1 19 2.34315 19 4V7H20C21.6569 7 23 8.34315 23 10V20.5858C23 22.3676 20.8457 23.2599 19.5858 22L17.5858 20H10C8.34315 20 7 18.6569 7 17V16H6.41421L4.41421 18C3.15429 19.2599 1 18.3676 1 16.5858V4ZM9 16V17C9 17.5523 9.44772 18 10 18H18C18.2652 18 18.5196 18.1054 18.7071 18.2929L21 20.5858V10C21 9.44772 20.5523 9 20 9H19V13C19 14.6569 17.6569 16 16 16H9ZM5 7C5 6.44772 5.44772 6 6 6H9C9.55228 6 10 6.44772 10 7C10 7.55228 9.55228 8 9 8H6C5.44772 8 5 7.55228 5 7ZM5 11C5 10.4477 5.44772 10 6 10H14C14.5523 10 15 10.4477 15 11C15 11.5523 14.5523 12 14 12H6C5.44772 12 5 11.5523 5 11Z" fill="#293644"/>
+                    </svg>
+            Start a New Conversation
+            </button>
+             </div>
+
+        </div>
+        <div class="circle">
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 290.868 290.868" style="enable-background:new 0 0 290.868 290.868;" xml:space="preserve">
+       <g>
+           <path style="fill:white;" d="M40.732,91.013c-10.051,0-18.198,7.119-18.198,15.922v68.105c0,8.794,8.148,15.932,18.198,15.932
+               c10.041,0,18.198-7.137,18.198-15.932v-68.105C58.931,98.141,50.774,91.013,40.732,91.013z M178.38,24.41l15.904-15.859
+               c1.966-1.957,1.966-5.116,0-7.083c-1.966-1.957-5.134-1.957-7.101,0l-19.572,19.538c-7.001-1.712-14.384-2.658-22.067-2.658
+               c-7.592,0-14.912,0.938-21.831,2.604L104.176,1.469c-1.966-1.957-5.144-1.957-7.101,0c-1.966,1.957-1.966,5.125,0,7.083
+               l15.822,15.777c-26.4,10.123-44.744,32.072-44.744,57.58c0,0.31,154.763,0.018,154.763,0
+               C222.925,56.465,204.681,34.57,178.38,24.41z M122.775,63.748c-5.034,0-9.104-4.06-9.104-9.086c0-5.016,4.069-9.086,9.104-9.086
+               s9.104,4.069,9.104,9.086C131.888,59.678,127.791,63.748,122.775,63.748z M168.303,63.748c-5.034,0-9.104-4.06-9.104-9.086
+               c0-5.016,4.069-9.086,9.104-9.086c5.034,0,9.104,4.069,9.104,9.086S173.328,63.748,168.303,63.748z M250.145,91.013
+               c-10.051,0-18.207,7.119-18.207,15.922v68.105c0,8.794,8.157,15.932,18.207,15.932c10.05,0,18.189-7.146,18.189-15.932v-68.105
+               C268.334,98.141,260.177,91.013,250.145,91.013z M68.153,199.976c0,15.021,12.181,27.184,27.22,27.238v47.722
+               c0,8.803,8.148,15.932,18.198,15.932c10.041,0,18.189-7.128,18.189-15.932v-47.722h27.348v47.722
+               c0,8.803,8.148,15.932,18.198,15.932c10.041,0,18.189-7.128,18.189-15.932v-47.722h0.118c15.085,0,27.311-12.199,27.311-27.238
+               V90.986H68.162v108.99H68.153z"/>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       </svg>
+        </div>
+</div>
+</body>
+</html>
